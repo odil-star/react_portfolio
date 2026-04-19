@@ -1,0 +1,51 @@
+@use '../../../styles/tokens' as *;
+
+.site-footer {
+  margin: 0 auto 24px;
+  border-radius: 32px;
+  border: 1px solid $border;
+  background: linear-gradient(180deg, rgba(11, 22, 39, 0.88), rgba(7, 15, 27, 0.92));
+  box-shadow: $shadow;
+}
+
+.site-footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 28px;
+}
+
+.site-footer__title {
+  color: $text-soft;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  color: $text-soft;
+
+  a {
+    transition:
+      color 0.24s ease,
+      transform 0.24s ease;
+
+    &:hover {
+      color: $text-main;
+      transform: translateY(-1px);
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .site-footer__inner {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-footer__inner {
+    padding: 20px;
+  }
+}
